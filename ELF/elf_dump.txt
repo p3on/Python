@@ -1,0 +1,1434 @@
+#include <elf.h>
+
+/*
+ * ELF dump of 'esp32_rom.elf'
+ *     2206224 (0x21AA10) bytes
+ */
+
+Elf32_Dyn dumpedelf_dyn_0[];
+struct {
+	Elf32_Ehdr ehdr;
+	Elf32_Phdr phdrs[36];
+	Elf32_Shdr shdrs[76];
+	Elf32_Dyn *dyns;
+} dumpedelf_0 = {
+
+.ehdr = {
+	.e_ident = { /* (EI_NIDENT bytes) */
+		/* [0] EI_MAG:        */ 0x7F,'E','L','F',
+		/* [4] EI_CLASS:      */ 1 , /* (ELFCLASS32) */
+		/* [5] EI_DATA:       */ 1 , /* (ELFDATA2LSB) */
+		/* [6] EI_VERSION:    */ 1 , /* (EV_CURRENT) */
+		/* [7] EI_OSABI:      */ 0 , /* (ELFOSABI_NONE) */
+		/* [8] EI_ABIVERSION: */ 0 ,
+		/* [9-15] EI_PAD:     */ 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
+	},
+	.e_type      = 2          , /* (ET_EXEC) */
+	.e_machine   = 94         , /* (EM_XTENSA) */
+	.e_version   = 1          , /* (EV_CURRENT) */
+	.e_entry     = 0x40000400 , /* (start address at runtime) */
+	.e_phoff     = 52         , /* (bytes into file) */
+	.e_shoff     = 2203184    , /* (bytes into file) */
+	.e_flags     = 0x300      ,
+	.e_ehsize    = 52         , /* (bytes) */
+	.e_phentsize = 32         , /* (bytes) */
+	.e_phnum     = 36         , /* (program headers) */
+	.e_shentsize = 40         , /* (bytes) */
+	.e_shnum     = 76         , /* (section headers) */
+	.e_shstrndx  = 73        
+},
+
+.phdrs = {
+/* Program Header #0 0x34 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 0          , /* (bytes into file) */
+	.p_vaddr  = 0x3FFADB5C , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFADB5C , /* (physical addr at runtime) */
+	.p_filesz = 1204       , /* (bytes in file) */
+	.p_memsz  = 1236       , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #1 0x54 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1204       , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE080 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFAE080 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 64         , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #2 0x74 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1204       , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE270 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFAE270 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 0          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #3 0x94 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1204       , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE290 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFAE290 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 1104       , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #4 0xB4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1204       , /* (bytes into file) */
+	.p_vaddr  = 0x3FFB8000 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFB8000 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 32624      , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #5 0xD4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1204       , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE0010 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFE0010 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 464        , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #6 0xF4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1204       , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE01F0 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFE01F0 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 592        , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #7 0x114 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1204       , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE0860 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFE0860 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 30160      , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #8 0x134 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1204       , /* (bytes into file) */
+	.p_vaddr  = 0x40000000 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000000 , /* (physical addr at runtime) */
+	.p_filesz = 368        , /* (bytes in file) */
+	.p_memsz  = 368        , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #9 0x154 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1572       , /* (bytes into file) */
+	.p_vaddr  = 0x40000180 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000180 , /* (physical addr at runtime) */
+	.p_filesz = 6          , /* (bytes in file) */
+	.p_memsz  = 6          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #10 0x174 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1578       , /* (bytes into file) */
+	.p_vaddr  = 0x400001C0 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x400001C0 , /* (physical addr at runtime) */
+	.p_filesz = 6          , /* (bytes in file) */
+	.p_memsz  = 6          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #11 0x194 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1584       , /* (bytes into file) */
+	.p_vaddr  = 0x40000200 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000200 , /* (physical addr at runtime) */
+	.p_filesz = 6          , /* (bytes in file) */
+	.p_memsz  = 6          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #12 0x1B4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1590       , /* (bytes into file) */
+	.p_vaddr  = 0x40000240 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000240 , /* (physical addr at runtime) */
+	.p_filesz = 6          , /* (bytes in file) */
+	.p_memsz  = 6          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #13 0x1D4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1596       , /* (bytes into file) */
+	.p_vaddr  = 0x40000280 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000280 , /* (physical addr at runtime) */
+	.p_filesz = 11         , /* (bytes in file) */
+	.p_memsz  = 11         , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #14 0x1F4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1607       , /* (bytes into file) */
+	.p_vaddr  = 0x400002C0 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x400002C0 , /* (physical addr at runtime) */
+	.p_filesz = 3          , /* (bytes in file) */
+	.p_memsz  = 3          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #15 0x214 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1610       , /* (bytes into file) */
+	.p_vaddr  = 0x40000300 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000300 , /* (physical addr at runtime) */
+	.p_filesz = 6          , /* (bytes in file) */
+	.p_memsz  = 6          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #16 0x234 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1616       , /* (bytes into file) */
+	.p_vaddr  = 0x40000340 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000340 , /* (physical addr at runtime) */
+	.p_filesz = 23         , /* (bytes in file) */
+	.p_memsz  = 23         , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #17 0x254 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1639       , /* (bytes into file) */
+	.p_vaddr  = 0x400003C0 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x400003C0 , /* (physical addr at runtime) */
+	.p_filesz = 6          , /* (bytes in file) */
+	.p_memsz  = 6          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #18 0x274 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1645       , /* (bytes into file) */
+	.p_vaddr  = 0x40000400 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000400 , /* (physical addr at runtime) */
+	.p_filesz = 349        , /* (bytes in file) */
+	.p_memsz  = 349        , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #19 0x294 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1994       , /* (bytes into file) */
+	.p_vaddr  = 0x40000560 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40000560 , /* (physical addr at runtime) */
+	.p_filesz = 53516      , /* (bytes in file) */
+	.p_memsz  = 53516      , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #20 0x2B4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 55510      , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE000 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000D66C , /* (physical addr at runtime) */
+	.p_filesz = 4          , /* (bytes in file) */
+	.p_memsz  = 4          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #21 0x2D4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 55514      , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE010 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFAE010 , /* (physical addr at runtime) */
+	.p_filesz = 390752     , /* (bytes in file) */
+	.p_memsz  = 390752     , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #22 0x2F4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 446266     , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE020 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFAE020 , /* (physical addr at runtime) */
+	.p_filesz = 390736     , /* (bytes in file) */
+	.p_memsz  = 390736     , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #23 0x314 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 837002     , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE030 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000D670 , /* (physical addr at runtime) */
+	.p_filesz = 80         , /* (bytes in file) */
+	.p_memsz  = 80         , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #24 0x334 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 837082     , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE270 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFAE270 , /* (physical addr at runtime) */
+	.p_filesz = 390688     , /* (bytes in file) */
+	.p_memsz  = 390688     , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #25 0x354 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1227770    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE2A0 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000D890 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 0          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #26 0x374 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1227770    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE3F0 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000D890 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 0          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #27 0x394 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1227770    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFAE6E0 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000D890 , /* (physical addr at runtime) */
+	.p_filesz = 6192       , /* (bytes in file) */
+	.p_memsz  = 6192       , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #28 0x3B4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1233962    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE0000 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000F0C0 , /* (physical addr at runtime) */
+	.p_filesz = 4          , /* (bytes in file) */
+	.p_memsz  = 4          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #29 0x3D4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1233966    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE0010 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000F0D0 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 0          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #30 0x3F4 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1233966    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE0050 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000F0D0 , /* (physical addr at runtime) */
+	.p_filesz = 0          , /* (bytes in file) */
+	.p_memsz  = 0          , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #31 0x414 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1233966    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE01E0 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000F0D0 , /* (physical addr at runtime) */
+	.p_filesz = 16         , /* (bytes in file) */
+	.p_memsz  = 16         , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #32 0x434 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1233982    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE0440 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x4000F0E0 , /* (physical addr at runtime) */
+	.p_filesz = 1056       , /* (bytes in file) */
+	.p_memsz  = 1056       , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #33 0x454 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1235038    , /* (bytes into file) */
+	.p_vaddr  = 0x3FFE1320 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x3FFE1320 , /* (physical addr at runtime) */
+	.p_filesz = 188896     , /* (bytes in file) */
+	.p_memsz  = 188896     , /* (bytes in mem at runtime) */
+	.p_flags  = 0x6        , /* PF_R | PF_W */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #34 0x474 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1423934    , /* (bytes into file) */
+	.p_vaddr  = 0x40010000 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40010000 , /* (physical addr at runtime) */
+	.p_filesz = 347890     , /* (bytes in file) */
+	.p_memsz  = 347890     , /* (bytes in mem at runtime) */
+	.p_flags  = 0x5        , /* PF_R | PF_X */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+/* Program Header #35 0x494 */
+{
+	.p_type   = 1          , /* [PT_LOAD] */
+	.p_offset = 1771824    , /* (bytes into file) */
+	.p_vaddr  = 0x3FF96000 , /* (virtual addr at runtime) */
+	.p_paddr  = 0x40066000 , /* (physical addr at runtime) */
+	.p_filesz = 36888      , /* (bytes in file) */
+	.p_memsz  = 36888      , /* (bytes in mem at runtime) */
+	.p_flags  = 0x4        , /* PF_R */
+	.p_align  = 1          , /* (min mem alignment in bytes) */
+},
+},
+
+.shdrs = {
+/* Section Header #0 '' 0x219E30 */
+{
+	.sh_name      = 0          ,
+	.sh_type      = 0          , /* [SHT_NULL] */
+	.sh_flags     = 0          ,
+	.sh_addr      = 0x0        ,
+	.sh_offset    = 0          , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 0          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #1 '.ResetVector.text' 0x219E58 */
+{
+	.sh_name      = 27         ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000400 ,
+	.sh_offset    = 1645       , /* (bytes) */
+	.sh_size      = 349        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #2 '.bt_text' 0x219E80 */
+{
+	.sh_name      = 45         ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40010000 ,
+	.sh_offset    = 1423934    , /* (bytes) */
+	.sh_size      = 347890     , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #3 '.text' 0x219EA8 */
+{
+	.sh_name      = 1044       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000560 ,
+	.sh_offset    = 1994       , /* (bytes) */
+	.sh_size      = 53516      , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #4 '.data_btdm' 0x219ED0 */
+{
+	.sh_name      = 54         ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE6E0 ,
+	.sh_offset    = 1227770    , /* (bytes) */
+	.sh_size      = 6192       , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #5 '.data_hal' 0x219EF8 */
+{
+	.sh_name      = 65         ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE010 ,
+	.sh_offset    = 446266     , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #6 '.data_ets' 0x219F20 */
+{
+	.sh_name      = 75         ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE010 ,
+	.sh_offset    = 446266     , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #7 '.data_cache' 0x219F48 */
+{
+	.sh_name      = 85         ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE020 ,
+	.sh_offset    = 837002     , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #8 '.data_gpio_pro' 0x219F70 */
+{
+	.sh_name      = 97         ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE0010 ,
+	.sh_offset    = 1233966    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #9 '.data_newlib' 0x219F98 */
+{
+	.sh_name      = 112        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE020 ,
+	.sh_offset    = 837002     , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #10 '.data_c' 0x219FC0 */
+{
+	.sh_name      = 125        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE030 ,
+	.sh_offset    = 837002     , /* (bytes) */
+	.sh_size      = 80         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #11 '.data_phyrom' 0x219FE8 */
+{
+	.sh_name      = 133        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE0C0 ,
+	.sh_offset    = 1227306    , /* (bytes) */
+	.sh_size      = 432        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #12 '.data_spi_flash' 0x21A010 */
+{
+	.sh_name      = 146        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE270 ,
+	.sh_offset    = 1227738    , /* (bytes) */
+	.sh_size      = 32         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #13 '.data_uart_pro' 0x21A038 */
+{
+	.sh_name      = 162        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE0050 ,
+	.sh_offset    = 1233966    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #14 '.data_etsc_pro' 0x21A060 */
+{
+	.sh_name      = 177        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE01E0 ,
+	.sh_offset    = 1233966    , /* (bytes) */
+	.sh_size      = 16         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #15 '.data_slc' 0x21A088 */
+{
+	.sh_name      = 192        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE2A0 ,
+	.sh_offset    = 1227770    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #16 '.data_sip' 0x21A0B0 */
+{
+	.sh_name      = 202        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE3F0 ,
+	.sh_offset    = 1227770    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #17 '.data_xtos_pro' 0x21A0D8 */
+{
+	.sh_name      = 212        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE0440 ,
+	.sh_offset    = 1233982    , /* (bytes) */
+	.sh_size      = 1056       , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #18 '.from_now_on_lets_dump_shit_into_dram0_0_instead' 0x21A100 */
+{
+	.sh_name      = 227        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE000 ,
+	.sh_offset    = 55510      , /* (bytes) */
+	.sh_size      = 4          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #19 '.bss_hal' 0x21A128 */
+{
+	.sh_name      = 276        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE010 ,
+	.sh_offset    = 55514      , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #20 '.bss_ets' 0x21A150 */
+{
+	.sh_name      = 285        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE010 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 16         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #21 '.bss_cache' 0x21A178 */
+{
+	.sh_name      = 294        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE020 ,
+	.sh_offset    = 446266     , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #22 '.bss_newlib' 0x21A1A0 */
+{
+	.sh_name      = 305        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE020 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 16         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #23 '.bss_c' 0x21A1C8 */
+{
+	.sh_name      = 317        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE080 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 64         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #24 '.bss_phyrom' 0x21A1F0 */
+{
+	.sh_name      = 324        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE270 ,
+	.sh_offset    = 837082     , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #25 '.bss_spi_flash' 0x21A218 */
+{
+	.sh_name      = 336        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE290 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 16         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #26 '.bss_slc' 0x21A240 */
+{
+	.sh_name      = 351        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE2A0 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 336        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #27 '.bss_sip' 0x21A268 */
+{
+	.sh_name      = 360        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFAE3F0 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 752        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #28 '.bss_btdm' 0x21A290 */
+{
+	.sh_name      = 369        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFB8000 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 32624      , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #29 '.from_now_on_lets_dump_shit_into_dram0_1_instead' 0x21A2B8 */
+{
+	.sh_name      = 379        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE0000 ,
+	.sh_offset    = 1233962    , /* (bytes) */
+	.sh_size      = 4          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #30 '.padding_after_342' 0x21A2E0 */
+{
+	.sh_name      = 428        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE0010 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #31 '.bss_gpio_pro' 0x21A308 */
+{
+	.sh_name      = 447        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE0010 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 64         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #32 '.padding_after_343' 0x21A330 */
+{
+	.sh_name      = 461        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE0050 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #33 '.padding_after_347' 0x21A358 */
+{
+	.sh_name      = 480        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE0050 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #34 '.bss_uart_pro' 0x21A380 */
+{
+	.sh_name      = 499        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE0050 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 400        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #35 '.padding_after_348' 0x21A3A8 */
+{
+	.sh_name      = 513        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE01E0 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #36 '.padding_after_351' 0x21A3D0 */
+{
+	.sh_name      = 532        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE01F0 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #37 '.bss_etsc_pro' 0x21A3F8 */
+{
+	.sh_name      = 551        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE01F0 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 592        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #38 '.padding_after_352' 0x21A420 */
+{
+	.sh_name      = 565        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE0440 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #39 '.padding_after_355' 0x21A448 */
+{
+	.sh_name      = 584        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE0860 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #40 '.bss_xtos_pro' 0x21A470 */
+{
+	.sh_name      = 603        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE0860 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 2752       , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #41 '.padding_after_356' 0x21A498 */
+{
+	.sh_name      = 617        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE1320 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #42 '.data_all_pro' 0x21A4C0 */
+{
+	.sh_name      = 636        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE1320 ,
+	.sh_offset    = 1423934    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #43 '.padding_after_359' 0x21A4E8 */
+{
+	.sh_name      = 650        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE1320 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #44 '.bss_all_pro' 0x21A510 */
+{
+	.sh_name      = 669        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE1320 ,
+	.sh_offset    = 1235038    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #45 '.padding_after_360' 0x21A538 */
+{
+	.sh_name      = 682        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE1320 ,
+	.sh_offset    = 1808712    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #46 '.stack_pro' 0x21A560 */
+{
+	.sh_name      = 701        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE1320 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 11264      , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #47 '.data_gpio_app' 0x21A588 */
+{
+	.sh_name      = 712        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE3F20 ,
+	.sh_offset    = 1808720    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #48 '.bss_gpio_app' 0x21A5B0 */
+{
+	.sh_name      = 727        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE3F20 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 64         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #49 '.data_uart_app' 0x21A5D8 */
+{
+	.sh_name      = 741        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE3F60 ,
+	.sh_offset    = 1808720    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #50 '.bss_uart_app' 0x21A600 */
+{
+	.sh_name      = 756        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE3F60 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 400        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #51 '.data_etsc_app' 0x21A628 */
+{
+	.sh_name      = 770        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE40F0 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 16         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #52 '.bss_etsc_app' 0x21A650 */
+{
+	.sh_name      = 785        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE4100 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 592        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #53 '.data_xtos_app' 0x21A678 */
+{
+	.sh_name      = 799        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE4350 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 1056       , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #54 '.bss_xtos_app' 0x21A6A0 */
+{
+	.sh_name      = 814        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE4770 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 2752       , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #55 '.data_all_app' 0x21A6C8 */
+{
+	.sh_name      = 828        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE5230 ,
+	.sh_offset    = 1808720    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #56 '.bss_all_app' 0x21A6F0 */
+{
+	.sh_name      = 842        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 1          ,
+	.sh_addr      = 0x3FFE5230 ,
+	.sh_offset    = 1808720    , /* (bytes) */
+	.sh_size      = 0          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 16         ,
+	.sh_entsize   = 0         
+},
+/* Section Header #57 '.stack_app' 0x21A718 */
+{
+	.sh_name      = 855        ,
+	.sh_type      = 8          , /* [SHT_NOBITS] */
+	.sh_flags     = 3          ,
+	.sh_addr      = 0x3FFE5230 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 11264      , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #58 '.WindowVectors.text' 0x21A740 */
+{
+	.sh_name      = 866        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000000 ,
+	.sh_offset    = 1204       , /* (bytes) */
+	.sh_size      = 368        , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #59 '.Level2InterruptVector.text' 0x21A768 */
+{
+	.sh_name      = 886        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000180 ,
+	.sh_offset    = 1572       , /* (bytes) */
+	.sh_size      = 6          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #60 '.Level3InterruptVector.text' 0x21A790 */
+{
+	.sh_name      = 914        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x400001C0 ,
+	.sh_offset    = 1578       , /* (bytes) */
+	.sh_size      = 6          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #61 '.Level4InterruptVector.text' 0x21A7B8 */
+{
+	.sh_name      = 942        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000200 ,
+	.sh_offset    = 1584       , /* (bytes) */
+	.sh_size      = 6          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #62 '.Level5InterruptVector.text' 0x21A7E0 */
+{
+	.sh_name      = 970        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000240 ,
+	.sh_offset    = 1590       , /* (bytes) */
+	.sh_size      = 6          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #63 '.DebugExceptionVector.text' 0x21A808 */
+{
+	.sh_name      = 998        ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000280 ,
+	.sh_offset    = 1596       , /* (bytes) */
+	.sh_size      = 11         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #64 '.NMIExceptionVector.text' 0x21A830 */
+{
+	.sh_name      = 1025       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x400002C0 ,
+	.sh_offset    = 1607       , /* (bytes) */
+	.sh_size      = 3          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #65 '.KernelExceptionVector.text' 0x21A858 */
+{
+	.sh_name      = 1050       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000300 ,
+	.sh_offset    = 1610       , /* (bytes) */
+	.sh_size      = 6          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #66 '.UserExceptionVector.text' 0x21A880 */
+{
+	.sh_name      = 1078       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x40000340 ,
+	.sh_offset    = 1616       , /* (bytes) */
+	.sh_size      = 23         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #67 '.DoubleExceptionVector.text' 0x21A8A8 */
+{
+	.sh_name      = 1104       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 6          ,
+	.sh_addr      = 0x400003C0 ,
+	.sh_offset    = 1639       , /* (bytes) */
+	.sh_size      = 6          , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #68 '.rodata' 0x21A8D0 */
+{
+	.sh_name      = 1132       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 2          ,
+	.sh_addr      = 0x3FF96000 ,
+	.sh_offset    = 1771824    , /* (bytes) */
+	.sh_size      = 36888      , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #69 '.xt.prop' 0x21A8F8 */
+{
+	.sh_name      = 1140       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 0          ,
+	.sh_addr      = 0x0        ,
+	.sh_offset    = 1808720    , /* (bytes) */
+	.sh_size      = 250452     , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #70 '.xt.lit' 0x21A920 */
+{
+	.sh_name      = 1149       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 0          ,
+	.sh_addr      = 0x0        ,
+	.sh_offset    = 2059172    , /* (bytes) */
+	.sh_size      = 6464       , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #71 '.xtensa.info' 0x21A948 */
+{
+	.sh_name      = 1157       ,
+	.sh_type      = 7          , /* [SHT_NOTE] */
+	.sh_flags     = 0          ,
+	.sh_addr      = 0x0        ,
+	.sh_offset    = 2065636    , /* (bytes) */
+	.sh_size      = 56         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #72 '.comment' 0x21A970 */
+{
+	.sh_name      = 1170       ,
+	.sh_type      = 1          , /* [SHT_PROGBITS] */
+	.sh_flags     = 48         ,
+	.sh_addr      = 0x0        ,
+	.sh_offset    = 2065692    , /* (bytes) */
+	.sh_size      = 64         , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 1         
+},
+/* Section Header #73 '.shstrtab' 0x21A998 */
+{
+	.sh_name      = 17         ,
+	.sh_type      = 3          , /* [SHT_STRTAB] */
+	.sh_flags     = 0          ,
+	.sh_addr      = 0x0        ,
+	.sh_offset    = 2065756    , /* (bytes) */
+	.sh_size      = 1179       , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+/* Section Header #74 '.symtab' 0x21A9C0 */
+{
+	.sh_name      = 1          ,
+	.sh_type      = 2          , /* [SHT_SYMTAB] */
+	.sh_flags     = 0          ,
+	.sh_addr      = 0x0        ,
+	.sh_offset    = 2066936    , /* (bytes) */
+	.sh_size      = 77360      , /* (bytes) */
+	.sh_link      = 75         ,
+	.sh_info      = 2815       ,
+	.sh_addralign = 4          ,
+	.sh_entsize   = 16        
+},
+/* Section Header #75 '.strtab' 0x21A9E8 */
+{
+	.sh_name      = 9          ,
+	.sh_type      = 3          , /* [SHT_STRTAB] */
+	.sh_flags     = 0          ,
+	.sh_addr      = 0x0        ,
+	.sh_offset    = 2144296    , /* (bytes) */
+	.sh_size      = 58887      , /* (bytes) */
+	.sh_link      = 0          ,
+	.sh_info      = 0          ,
+	.sh_addralign = 1          ,
+	.sh_entsize   = 0         
+},
+},
+
+.dyns = dumpedelf_dyn_0,
+};
+Elf32_Dyn dumpedelf_dyn_0[] = {
+ /* no dynamic tags ! */ };
