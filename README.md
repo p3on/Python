@@ -4,4 +4,4 @@ This is a loose collection of different snippets and scripts that have been accu
 
 ## Table of contents
 
-ELF - scripts generating ELF header / trailer for an ELF-executable for xtensa-tensilica ESP32 chipset
+[ELF](https://github.com/p3on/Python/tree/master/ELF) - scripts generating ELF header / trailer for an ELF-executable for xtensa-tensilica ESP32 chipset
