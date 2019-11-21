@@ -2,10 +2,8 @@
 
 ## Index
 
-- [simple-raw-websocket](#simple-raw-websocket)
 - [simple-captcha-solver](#simple-captcha-solver)
-
-### simple raw websocket
+- [simple-raw-websocket](#simple-raw-websocket)
 
 ### simple captcha solver
 
@@ -20,3 +18,5 @@ Tweak with the different modes of tesseract
 - oem
 
 solutionrate >10% => but don't get your hopes up =)
+
+### simple raw websocket
