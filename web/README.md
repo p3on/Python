@@ -2,8 +2,8 @@
 
 ## Index
 
-- [simple-captcha-solver](#simple-captcha-solver)
-- [simple-raw-websocket](#simple-raw-websocket)
+- [simple captcha solver](#simple-captcha-solver)
+- [simple raw websocket](#simple-raw-websocket)
 
 ### simple captcha solver
 
