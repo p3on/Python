@@ -1,10 +1,4 @@
 def readSentences(openedFile):
-    """Function to read sentences from the different files, read sentences identified by an '&' instead of a '#'
-    Args:
-        openedFile: FileHandler to the file being read
-    Returns:
-        sentences: Array of sentences read from file
-    """
     read = 0
     sentences = []
     currentLine = 0
